@@ -30,7 +30,16 @@ Annotation Validation ensures type checking for function annotations.
 Features
 --------
 
-* TODO
+* Validates input to match data types of annotations of function arguments
+* Validates output to match data type of annotation of return argument
+* Used as a decorator!
+
+Possible Improvements
+---------------------
+
+* Validation of ranges of input
+* Throw warnings instead of errors
+* Logging
 
 Credits
 -------
