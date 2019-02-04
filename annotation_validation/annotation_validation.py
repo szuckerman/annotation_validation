@@ -34,7 +34,6 @@ def _validate_return(obj, result):
     # iterate all type hints
     # result_type = type(result)
     for attr_name, attr_type in hints.items():
-        print(attr_name, attr_type)
 
         if attr_name == 'return':
 
