@@ -29,9 +29,6 @@ def test_content(response):
     # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
 
-
-
-
 @validate_types
 def addition(number: int, other_number: int) -> int:
     return number + other_number
@@ -39,42 +36,41 @@ def addition(number: int, other_number: int) -> int:
 
 @validate_types
 def name(first: Union[str, int]) -> str:
-    return 'hi {first}!'.format(first=first)
+    return "hi {first}!".format(first=first)
 
 
 @validate_types
 def name2(first: Union[str, int]) -> int:
-    return 'hi {first}!'.format(first=first)
+    return "hi {first}!".format(first=first)
 
 
 @validate_types
 def name3(first: Union[str, int]) -> Union[int, str]:
-    return 'hi {first}!'.format(first=first)
+    return "hi {first}!".format(first=first)
 
 
 def test_decorator_fail_basic_int():
     with pytest.raises(TypeError):
-        addition('1', 1)
+        addition("1", 1)
 
 
 def test_decorator_basic_int():
-        assert addition(1, 1) == 2
+    assert addition(1, 1) == 2
 
 
 def test_fail_decorator_basic_Union():
     with pytest.raises(TypeError):
-        name(['sam'])
+        name(["sam"])
 
 
 def test_decorator_basic_Union():
-        assert name('sam') == 'hi sam!'
+    assert name("sam") == "hi sam!"
 
 
 def test_fail_return():
     with pytest.raises(TypeError):
-        name2('sam')
+        name2("sam")
 
 
 def test_return_Union():
-    assert name3('sam') == 'hi sam!'
-
+    assert name3("sam") == "hi sam!"
