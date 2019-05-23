@@ -5,7 +5,7 @@
 
 from functools import wraps, lru_cache
 from inspect import getfullargspec
-from typing import get_type_hints, Union
+from typing import get_type_hints, Dict, Iterable, List, Union
 
 
 @lru_cache(maxsize=128)
