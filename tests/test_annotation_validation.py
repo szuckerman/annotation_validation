@@ -4,11 +4,6 @@
 """Tests for `annotation_validation` package."""
 
 import pytest
-
-
-from annotation_validation import annotation_validation
-
-import pytest
 from annotation_validation import validate_types
 from typing import Union, Iterable, Dict, List
 
